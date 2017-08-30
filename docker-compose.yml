@@ -1,0 +1,21 @@
+nginx:
+    build: ./nginx
+    links:
+        - api:api
+    ports:
+        - "80:80"
+api:
+  build: .
+  links:
+   - db
+  ports:
+   - "3000:3000"
+  volumes:
+   - .:/usr/src/app/
+  environment:
+   NODE_ENV: production
+   MONGO_URL: mongodb://db:27017/mern-starter
+db:
+  image: mongo:latest
+  ports:
+   - "27017:27017"

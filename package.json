@@ -1,0 +1,42 @@
+{
+    "name": "api-server-fashion",
+    "version": "1.0.0",
+    "description": "Api Server for Fashion booking platform",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "start": "nodemon ./index",
+        "prod": "NODE_ENV=production node ./index",
+        "test": "mocha --compilers js:babel-core/register --timeout 10000",
+        "standard": "standard src --fix"
+    },
+    "keywords": [
+        "express",
+        "es2017",
+        "api",
+        "nodejs"
+    ],
+    "author": "Kumaresan K <tkkumaresan@gmail.com> (https://github.com/kumaresank)",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-preset-env": "^1.6.0",
+        "chai": "^4.1.1",
+        "chai-http": "^3.0.0",
+        "mocha": "^3.5.0"
+    },
+    "dependencies": {
+        "async": "^2.5.0",
+        "bluebird": "^3.5.0",
+        "body-parser": "^1.17.2",
+        "debug": "^3.0.1",
+        "express": "^4.15.4",
+        "lodash": "^4.17.4",
+        "mongoose": "^4.11.9",
+        "morgan": "^1.8.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git remote add origin https://github.com/kumaresank/docker-express-mongo-es6.git"
+    }
+}
